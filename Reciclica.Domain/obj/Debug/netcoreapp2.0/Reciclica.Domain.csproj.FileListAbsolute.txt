@@ -1,0 +1,9 @@
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\bin\Debug\netcoreapp2.0\Reciclica.Domain.deps.json
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\bin\Debug\netcoreapp2.0\Reciclica.Domain.dll
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\bin\Debug\netcoreapp2.0\Reciclica.Domain.pdb
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\obj\Debug\netcoreapp2.0\Reciclica.Domain.csprojResolveAssemblyReference.cache
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\obj\Debug\netcoreapp2.0\Reciclica.Domain.csproj.CoreCompileInputs.cache
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\obj\Debug\netcoreapp2.0\Reciclica.Domain.AssemblyInfoInputs.cache
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\obj\Debug\netcoreapp2.0\Reciclica.Domain.AssemblyInfo.cs
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\obj\Debug\netcoreapp2.0\Reciclica.Domain.dll
+C:\Users\BRuno\Documents\ReciclicaN\Reciclica\Reciclica.Domain\obj\Debug\netcoreapp2.0\Reciclica.Domain.pdb

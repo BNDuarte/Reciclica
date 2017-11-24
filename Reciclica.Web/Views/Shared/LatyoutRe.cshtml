@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>RECICLICA</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Css/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <!-- use jssor.slider.debug.js instead for debug -->
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+                { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var jssor_1_options = {
+                $AutoPlay: true,
+                $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: jssor_1_SlideshowTransitions,
+                    $TransitionsOrder: 1
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <img src="images/logo.jpg" width="200px" height="200px" contextmenu="Noticia Aqui"/>
+            </div>
+
+            @*Pesquisa*@
+            <form method="get" action="@Url.Action("Index", "Pesquisa")">
+                <div id="divBusca" class="container">
+                    <img src="images/busca.jpg" width="35px" height="32px" alt="Digite Sua Cidade..." />
+                    <input type="text" name="searchTerm" id="searchTerm" placeholder="Digite o material..." />
+                    <button type="submit" id="btnBusca">Buscar</button>
+                </div>
+            </form>
+            @*Pesquisa*@
+        </div>
+        <div id="menu">
+            <ul>
+                <li id="menuHome">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li id="menuQuemSomos">@Html.ActionLink("Quem Somos", "Index", "QuemSomos")</li>
+                @*<li><a href="parceria.html">SEJA TAMBÉM UM PARCEIRO</a></li>*@
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            @RenderBody()
+        </div>
+</body>

@@ -1,0 +1,28 @@
+@model Reciclica.Web.Empresas.Empresa
+ 
+@{
+    Layout = null;
+}
+ 
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Detalhes da Empresa</h4>
+        </div>
+        <div class="modal-body">
+            <p>@Html.DisplayNameFor(model => model.Nome) : @Html.DisplayFor(model => model.Nome)</p>
+            <p>@Html.DisplayNameFor(model => model.Cnpj) : @Html.DisplayFor(model => model.Cnpj)</p>
+            <p>@Html.DisplayNameFor(model => model.Telefone) : @Html.DisplayFor(model => model.Telefone)</p>
+            <p>@Html.DisplayNameFor(model => model.Telefone) : @Html.DisplayFor(model => model.Telefone2)</p>
+            <p>@Html.DisplayNameFor(model => model.Endereco) : @Html.DisplayFor(model => model.Endereco)</p>
+            <p>@Html.DisplayNameFor(model => model.Numero) : @Html.DisplayFor(model => model.Numero)</p>
+            <p>@Html.DisplayNameFor(model => model.Bairro) : @Html.DisplayFor(model => model.Bairro)</p>
+            <p>@Html.DisplayNameFor(model => model.Cidade) : @Html.DisplayFor(model => model.Cidade)</p>
+            <p>@Html.DisplayNameFor(model => model.Cep) : @Html.DisplayFor(model => model.Cep)</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

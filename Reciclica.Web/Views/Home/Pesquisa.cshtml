@@ -1,0 +1,85 @@
+@model IEnumerable<Reciclica.Web.Pontos.Ponto>
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    ViewData["Title"] = "Resultado Pesquisa";
+}
+<div class="row">
+    <div class="col-md-12">
+        <h3>Resultado de Pesquisa para: @ViewBag.Material</h3>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 resultado" style="background-color:#8fb53c">
+            <p class="resultado-empresa"><spam>Empresa:</spam><a id="empresa" data-id="@item.Empresa.Id">@Html.DisplayFor(modelItem => item.Empresa.Nome)</a></p>
+            <p><spam>Telefone:</spam> @Html.DisplayFor(modelItem => item.Empresa.Telefone)</p>
+            <p><spam>Endereço de Coleta:</spam> @Html.DisplayFor(modelItem => item.Logradouro)</p>
+        </div>
+    }
+</div>
+
+<div class="modal" id="modal">
+</div>
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#empresa").click(function () {
+                var id = $(this).attr("data-id");
+                var url = "/Empresas/Details/" + id;
+                $("#modal").load(url, function () {
+                    $("#modal").modal();
+                })
+                //$.get(url, function (data) {
+                //     $("#modal").modal();
+                //});
+            });
+        })
+    </script>
+}
+
+
+<!-- <table border="1px" cellpadding="5px" cellspacing="0" id="alter" class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logradouro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Material.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logradouro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+        </tr>
+    }
+</table> -->

@@ -1,0 +1,65 @@
+@model Reciclica.Web.Empresas.Empresa
+@{
+    ViewData["Title"] = "Empresa";
+}
+
+<div class="row header">
+    <div class="col-md-12">
+        <h3>Empresa</h3>
+        <a href="/Empresas" class="btn btn-primary">Back</a>
+    </div>
+</div>
+<div class="row form-wrapper">
+    <div class="col-md-12">
+        <form asp-action="Create" asp-controller="Empresas" method="POST">
+            <input type="hidden" asp-for="Id">
+        <div class="form-group">
+            <label for="Cnpj">CNPJ</label>
+            <input type="text" class="form-control" asp-for="Cnpj">
+        </div>
+        <div class="form-group">
+            <label for="Nome">Nome</label>
+            <input type="text" class="form-control" asp-for="Nome">
+        </div>
+        <div class="form-group">
+            <label for="Telefone">Telefone</label>
+            <input type="text" class="form-control" asp-for="Telefone">
+        </div>
+        <div class="form-group">
+            <label for="Telefone2">Telefone</label>
+            <input type="text" class="form-control" asp-for="Telefone2">
+        </div>
+        <div class="form-group">
+            <label for="Endereco">Endereço</label>
+            <input type="text" class="form-control" asp-for="Endereco">
+        </div>
+        <div class="form-group">
+            <label for="Bairro">Bairro</label>
+            <input type="text" class="form-control" asp-for="Bairro">
+        </div>
+        <div class="form-group">
+            <label for="Cidade">Cidade</label>
+            <input type="text" class="form-control" asp-for="Cidade">
+        </div>
+        <div class="form-group">
+            <label for="Numero">Numero</label>
+            <input type="text" class="form-control" asp-for="Numero">
+        </div>
+        <div class="form-group">
+            <label for="Cep">CEP</label>
+            <input type="text" class="form-control" asp-for="Cep">
+        </div>
+        <button type="submit" class="btn btn-default">Salvar</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/jquery.validate.unobtrusive.js"></script>
+    <script src="/js/jquery.unobtrusive-ajax.min.js"></script>
+}
+
+
+
+
